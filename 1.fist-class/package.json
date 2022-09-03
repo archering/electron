@@ -1,0 +1,44 @@
+{
+  "name": "1.fist-class",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "electron  main.js",
+    "release":"electron-builder"
+  },
+  "keywords": [],
+  "author": "ericever",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^20.1.1",
+    "electron-builder": "^23.3.3"
+  },
+  "build":{
+    "appId":"my-fitst-release-app",
+    "copyright":"free",
+    "productName":"electron-one",
+    "directories": {
+      "buildResources": "icon", 
+      "output": "dist"
+    },    
+    "dmg":{
+      "background":"icon/3.jpeg",
+      "window": {
+        "x":100,
+        "y":100,
+        "width":800,
+        "height":600
+      }
+    },
+    "win": {
+      "icon": "icon/1.ico",
+      "target": ["nsis"] 
+    },
+    "nsis": {                          
+      "language": "2052",             
+      "perMachine": true,             
+      "allowToChangeInstallationDirectory": true
+    }    
+  }
+}
